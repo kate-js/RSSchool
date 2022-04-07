@@ -9,22 +9,25 @@
 </head>
 <body>
   <div class="wrapper">
-    <header class="header_container _container">
-      <div class="header_logo">
-        <a href="../main/main.html"><h1>Cozy House</h1></a>
-        <span>Shelter for pets in Boston</span>
+    <div class="fixed">
+      <div class="header">
+        <header class="header_container _container">
+          <div class="header_logo">
+            <a href="../main/main.html"><h1>Cozy House</h1></a>
+            <span>Shelter for pets in Boston</span>
+          </div>
+          <nav>
+            <ul class="navigation">
+              <li><a href="../main/main.html">About the shelter</a></li>
+              <li class="underline"><a href="#">Our pets</a></li>
+              <li><a href="../main/main.html#help">Help the shelter</a></li>
+              <li><a href="../main/main.html#contacts">Contacts</a></li>
+            </ul>
+          </nav>
+        </header>
       </div>
-      <nav>
-        <ul class="navigation">
-          <li><a href="../main/main.html">About the shelter</a></li>
-          <li class="underline"><a href="#">Our pets</a></li>
-          <li><a href="../main/main.html#help">Help the shelter</a></li>
-          <li><a href="../main/main.html#contacts">Contacts</a></li>
-        </ul>
-      </nav>
-    </header>
-
-
+    </div>
+    
     <main class="main">
       <div class="main_container ">
         <div class="pets">
@@ -36,7 +39,7 @@
             <div class="pets_content">
               <ul class="pets_cards">
                 <li class="card">
-                  <img src="../../assets/images/pets-katrine.png">
+                  <img src="../../assets/images/pets-katrine.svg">
                   <p>Katrine</p>
                   <button class="button_cards">Learn more</button>
                 </li>
@@ -77,14 +80,13 @@
                 </li>
               </ul>
               <div class="main_navigation">
-                <button class="button_slider no_active"><pre><<</pre></button>
-                <button class="button_slider no_active"><pre><</pre></button>
-                <button class="button_slider active_page ">1</button>
+                <button class="button_slider no_active" disabled><pre><<</pre></button>
+                <button class="button_slider no_active" disabled><pre><</pre></button>
+                <button class="button_slider active_page">1</button>
                 <button class="button_slider active "><pre>></pre></button>
                 <button class="button_slider active "><pre>>></pre></button>
               </div>
             </div>
-            <button class="button">Get to know the rest</button>
           </div>
         </div>
       </div>
