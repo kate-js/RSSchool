@@ -1,3 +1,35 @@
+@font-face {
+  font-family: Georgia;
+  src: url(../../assets/fonts/georgia/georgia\ bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Georgia;
+  src: url(../../assets/fonts/georgia/Georgia\ Regular\ font.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Georgia;
+  src: url(../../assets/fonts/georgia/georgia\ italic.ttf);
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Arial;
+  src: url(../../assets/fonts/arial/ArialMT.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Arial;
+  src: url(../../assets/fonts/arial/Arial-ItalicMT.ttf);
+  font-weight: 400;
+  font-style: italic;
+}
+
 *,
 *::after,
 *::after {
@@ -57,10 +89,14 @@ html {
   padding: 15px 45px;
   color: #292929;
   font-size: 17px;
+  letter-spacing: 0.06em;
+  font-family: Georgia;
+  line-height: 130%;
 }
 
 .button_slider {
-  padding: 23px 19px;
+  width: 52px;
+  height: 52px;
   border: 2px solid #F1CDB3;
   box-sizing: border-box;
   border-radius: 100px;
@@ -83,8 +119,9 @@ html {
   letter-spacing: 0.06em;
   background-color: white;
   align-items: center;
-  padding: 15px 45px;
+  padding: 13px 43px;
   margin: 30px 0;
+  font-family: Georgia;
 }
 
 .header {
@@ -105,13 +142,21 @@ html {
   text-align: center;
 }
 
-.header_logo p {
+.header_logo h1 {
   font-size: 32px;
   color: #F1CDB3;
+  margin-bottom: 10px;
+  line-height: 35px;
+  letter-spacing: 0.06em;
+  font-family: Georgia;
 }
 
 .header_logo span {
   color: white;
+  letter-spacing: 0.1em;
+  font-size: 13px;
+  line-height: 15px;
+  font-family: Arial;
 }
 
 .navigation {
@@ -119,19 +164,29 @@ html {
 }
 
 .navigation li {
-  margin-right: 30px;
+  margin-right: 36px;
+  font-family: Arial;
+  font-size: 15px;
+  line-height: 160%;
+}
+
+.underline{
+  border-bottom: 2px solid #F1CDB3;
+}
+
+.navigation li:last-child {
+  margin-right: 0;
 }
 
 .main_start {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 60px;
 }
 
 .main_content {
   width: 460px;
   max-height: 698px;
+  margin-top: 223px;
 }
 
 .main_start_title {
@@ -139,6 +194,8 @@ html {
   font-size: 44px;
   color: #FFFFFF;
   margin-bottom: 42px;
+  font-family: Georgia;
+  line-height: 130%;
 }
 
 .main_start_content {
@@ -146,17 +203,25 @@ html {
   color: #CDCDCD;
   margin-bottom: 42px;
   line-height: 24px;
+  font-family: Arial;
+  font-size: 15px;
+  line-height: 160%;
+}
+
+.main_photo {
+  margin-top: 60px;
 }
 
 .about_item {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 80px 40px 100px;
+  margin: 80px 215px 100px;
 }
 
 .about_content {
   width: 430px;
+  margin-left: 120px;
 }
 
 .about_content h3 {
@@ -165,12 +230,15 @@ html {
   margin-right: 60px;
   line-height: 130%;
   letter-spacing: 0.06em;
+  font-family: 'Georgia';
 }
 
 .about_content p {
   margin-top: 25px;
   font-size: 15px;
   color: #4C4C4C;
+  line-height: 160%;
+  font-family: Arial;
   line-height: 160%;
 }
 
@@ -193,16 +261,18 @@ html {
   letter-spacing: 0.06em;
   color: #545454;
   text-align: center;
+  font-family: Georgia;
+  margin-bottom: 60px;
 }
 
 .pets_content {
   display: flex;
   align-items: center;
+  margin-bottom: 60px;
 }
 
 .pets_cards {
   display: flex;
-  margin-bottom: 60px;
 }
 
 .card {
@@ -223,6 +293,7 @@ html {
   font-size: 20px;
   line-height: 23px;
   color: #545454;
+  font-family: 'Georgia';
 }
 
 .help_item {
@@ -230,29 +301,46 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 80px 40px 100px 40px;
+  padding: 80px 0 100px 0;
 }
 
 .help_item h3{
-  width: 308px;
+  width: 310px;
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #545454;
   text-align: center;
+  font-family: Georgia;
 }
 
 .help_list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-content: center;
+  justify-content: center;
   row-gap: 60px;
-  margin-top: 60px;
+  margin: 60px 87px 0 87px;
 }
 
 .help_list li {
-  margin: 0 70px;
+  margin-right: 119px;
+}
+
+.help_list li:nth-child(5) {
+  margin-right: 0;
+}
+
+.help_list li:last-child {
+  margin-right: 0;
+}
+
+.help_list li p {
+  font-family: 'Georgia';
+  font-size: 20px;
+  line-height: 115%;
+  text-align: center;
+  letter-spacing: 0.06em;
 }
 
 .help-card {
@@ -260,11 +348,10 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .help-card img {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
 
 .donation {
@@ -284,6 +371,7 @@ html {
   flex-direction: column;
   justify-content: flex-start;
   width: 380px;
+  margin-left: 30px;
 }
 
 .header3 {
@@ -293,6 +381,7 @@ html {
   letter-spacing: 0.06em;
   color: #545454;
   text-align: start;
+  font-family: Georgia;
 }
 
 .donation_card span {
@@ -301,6 +390,7 @@ html {
   letter-spacing: 0.06em;
   color: #545454;
   margin: 20px 0;
+  font-family: Georgia;
 }
 
 .donation_card p {
@@ -309,6 +399,7 @@ html {
   line-height: 18px;
   font-style: italic;
   width: 380px;
+  font-family: Arial;
 }
 
 .credit_card {
@@ -316,18 +407,22 @@ html {
   border-radius: 9px;
   align-items: center;
   padding: 10px 15px;
-  font-size: 20px;
-  align-items: center;
   margin-bottom: 20px;
+  width: 349px;
 }
 
 .credit_card h4{
-  display: inline;
-  padding: 10px 15px;
+  display: inline-block;
   font-size: 20px;
   line-height: 115%;
   letter-spacing: 0.06em;
   color: #545454;
+  font-family: Georgia;
+  font-weight: 400;
+}
+
+.credit_card img {
+  margin-right: 10px;
 }
 
 .footer-item {
@@ -338,24 +433,38 @@ html {
 .footer {
   display: flex;  
   justify-content: space-between;
+  margin-bottom: 60px;
 }
 
 .footer_info {
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
-.footer_info h3 {
-  color: white;
-  margin-bottom: 35px;
+.contacts h3 {
+  margin-bottom: 42px;
+  color:white;
 }
 
-.footer_info:first-child {
+.location h3 {
+  margin-bottom: 32px;
+  color:white;
+}
+
+.address {
+  margin-bottom: 32px;
+}
+
+.email{
+  margin-bottom: 42px;
+}
+
+.contacts {
   width: 278px;
 }
 
-.footer_info:last-child {
+.location {
   width: 302px;
 }
 
@@ -364,5 +473,11 @@ html {
   line-height: 115%;
   letter-spacing: 0.06em;
   color: #F1CDB3;
-  margin-bottom: 60px;
+  font-family: Georgia;
+  display: flex;
+  align-items: center;
+}
+
+.footer-detail img {
+  margin-right: 20px;
 }
