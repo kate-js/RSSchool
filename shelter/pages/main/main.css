@@ -67,9 +67,6 @@ h6 {
 body,
 html {
   height: 100%;
-  /* line-height: 1; */
-  /* font-size: 16px;
-  color: black; */
 }
 
 .wrapper {
@@ -124,10 +121,10 @@ html {
   font-family: Georgia;
 }
 
-.header {
+/* .header {
   background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
   padding-top: 60px;
-}
+} */
 
 .header_container {
   display: flex;
@@ -216,7 +213,8 @@ html {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 80px 215px 100px;
+  margin-top: 80px;
+  margin-bottom: 100px;
 }
 
 .about_content {
@@ -480,4 +478,5 @@ html {
 
 .footer-detail img {
   margin-right: 20px;
+  max-width: 100%;
 }
