@@ -292,12 +292,12 @@ html {
 
 .footer {
   display: flex;  
-  justify-content: space-between;
   margin-bottom: 60px;
 }
 
 .footer_info {
   margin-top: 16px;
+  margin-right: 160px;
   display: flex;
   flex-direction: column;
 }
