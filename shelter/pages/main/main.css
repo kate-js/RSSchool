@@ -319,11 +319,10 @@ html {
   cursor: pointer;
   background-color: #fefbf9;
   transform: scale(1,1);
-  border: 2px solid #F1CDB3;
 }
 
 .card:hover .button_cards {
-  background-color: red!important;
+  background-color: #F1CDB3!important;
 }
 
 .card img {
