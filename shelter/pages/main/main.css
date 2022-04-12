@@ -51,7 +51,9 @@ ol {
 }
 
 img {
-  vertical-align: top;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 h1,
@@ -78,6 +80,7 @@ html {
 ._container {
   max-width: 1200px;
   margin: 0px auto;
+  padding: 0 20px;
 }
 
 .button {
@@ -215,7 +218,7 @@ html {
 }
 
 .main_content {
-  width: 460px;
+  max-width: 460px;
   max-height: 698px;
   margin-top: 223px;
 }
@@ -266,7 +269,7 @@ html {
 }
 
 .about_content p {
-  margin-top: 25px;
+  margin-top: 24px;
   font-size: 15px;
   color: #4C4C4C;
   line-height: 160%;
@@ -476,13 +479,12 @@ html {
 .footer {
   display: flex;  
   margin-bottom: 60px;
+  justify-content: space-between;
 }
 
 .footer_info {
   margin-top: 16px;
-  margin-right: 160px;
   display: flex;
-  flex-direction: column;
 }
 
 .contacts h3 {
@@ -503,14 +505,6 @@ html {
   margin-bottom: 42px;
 }
 
-.contacts {
-  width: 278px;
-}
-
-.location {
-  width: 302px;
-}
-
 .footer-detail {
   font-size: 20px;
   line-height: 115%;
@@ -528,4 +522,131 @@ html {
 
 .footer-detail a span{
   color: #F1CDB3;
+}
+
+@media screen and (max-width: 768px){
+  .header {
+    padding: 30px 10px 0 10px;
+  }
+
+  .main_start {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 58px;
+  }
+
+  .main_content {
+    max-width: 460px;
+    margin-top: 0px;
+    margin-bottom: 100px;
+  }
+  .main_photo {
+    margin-top: 0px;
+    margin-left: 138px;
+  }
+
+  .button_main {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about_item {
+    margin-left: 0;
+    flex-direction: column-reverse;
+  }
+
+  .about_content {
+    margin-left: 0;
+  }
+
+  .about_photo {
+    margin-top: 81px;
+  }
+
+  .woody {
+    display: none;
+  }
+  .pets ._container {
+    padding: 0;
+  }
+
+  .pets {
+    padding: 80px 30px 100px 30px;
+  }
+
+  .card {
+    margin: 0;
+  }
+
+  .card:first-child{
+    margin-right: 40px;
+    margin-left: 12px;
+  }
+
+  .card:nth-child(2){
+    margin-right: 12px;
+  }
+
+  .help_list {
+    justify-content: space-between;
+    margin: 60px 69px 0 69px;
+  }
+
+  .help_list li {
+    margin-right: 0;
+    width: 170px;
+  }
+
+  .donation {
+    padding-top: 77px;
+  }
+
+  .donation_item {
+    flex-direction: column-reverse;
+  }
+
+  .donation_card {
+    margin-left: 0;
+  }
+
+  .donation_img {
+    margin-top: 61px;
+  }
+
+  .credit_card {
+    padding: 7px 15px;
+  }
+
+  .credit_card img {
+    display: inline;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-item {
+    padding: 14px 40px 0 40px;
+  }
+
+  .footer_image {
+    margin-top: 66px;
+  }
+
+  .footer_contacts {
+    margin-right: 42px;
+  }
+
+  .email {
+    margin-top: 42px;
+  }
+
+  .address {
+    margin-top: 32px;
+  }
+  
+  .address img {
+    width: 40px;
+  }
 }
