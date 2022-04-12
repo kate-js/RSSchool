@@ -249,6 +249,7 @@ html {
   align-items: center;
   margin-top: 80px;
   margin-bottom: 100px;
+  margin-left: 215px;
 }
 
 .about_content {
@@ -320,6 +321,10 @@ html {
   background-color: #fefbf9;
   transform: scale(1,1);
   border: 2px solid #F1CDB3;
+}
+
+.card:hover .button_cards {
+  background-color: red!important;
 }
 
 .card img {
