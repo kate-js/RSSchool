@@ -236,7 +236,7 @@ html {
   width: 100%;
   height: 2px;
   background: #F1CDB3;
-  margin: 10px 0;
+  margin: 8px 0;
   z-index: 2;
   transition: all 0.3s ease-in-out;
 }
@@ -260,10 +260,10 @@ html {
 }
 
 .main_start_title {
-  width: 310px;
   font-size: 44px;
   color: #FFFFFF;
   margin-bottom: 42px;
+  padding-right: 150px;
   font-family: Georgia;
   line-height: 130%;
 }
@@ -563,7 +563,7 @@ html {
   color: #F1CDB3;
 }
 
-@media screen and (max-width: 1279px) and (min-width:768px) {
+@media screen and (max-width: 1279px)  {
   .header {
     padding: 30px 30px 0 30px;
   }
@@ -652,9 +652,8 @@ html {
   }
 
   .footer {
-    column-gap: 60px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   .footer-item {
@@ -670,6 +669,231 @@ html {
   }
 
   .footer_image {
-    margin-top: 66px;
+    margin-top: 24px;
+  }
+  
+  .map {
+    margin: 0;
+  }
+
+  a.footer_link {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 30px 10px 0 10px;
+  }
+
+  .header_container {
+    margin-right: 43px;
+    align-items:initial;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .nav-burger {
+    display: block;
+    padding-top: 11px;
+  }
+
+  .main_start_title {
+    text-align: center;
+    font-size: 25px;
+    padding: 0 39px;
+    letter-spacing: 0.06em;
+  }
+
+  .main_start_content {
+    text-align: center;
+  }
+
+  .main_photo {
+    margin-left: 40px;
+    margin-top: 5px;
+  }
+
+  .about_item {
+    padding: 42px 10px;
+  }
+
+  .about_content h3 {
+    font-size: 25px;
+    text-align: center;
+    padding: 0 12px;
+    margin-right: 0;
+  }
+
+  .about_content p {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: justify;
+    margin-top: 23px;
+  }
+
+  .about_photo {
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+
+  .pets {
+    padding: 43px 10px;
+  }
+
+  .pets h3 {
+    font-size: 25px;
+    margin-bottom: 41px;
+  }
+
+  .button_slider {
+    order: 2;
+    margin: auto;
+  }
+
+  .pets_cards li{
+    display: none;
+  }
+  
+  .pets_cards li:first-child {
+    display: block;
+  }
+
+  .pets_content {
+    display: grid;
+    grid-template-columns: repeat(2, 135px);
+    grid-auto-rows: 435px 95px;
+    margin-bottom: 19px;
+  }
+
+  .pets_cards {
+    order: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .button_cards {
+    margin: 30px 41px;
+  }
+
+  .help_item {
+    padding: 42px 10px;
+  }
+
+  .help_item h3 {
+    font-size: 25px;
+    padding: 0 23px;
+  }
+
+  .help_list {
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    gap: 30px;
+    margin-top: 42px;
+  }
+
+  .help_list li p {
+    font-size: 15px;
+    line-height: 110%;
+  }
+
+  .help-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .donation {
+    padding: 42px 10px;
+
+  }
+  .donation span {
+    letter-spacing: 0;
+    padding: 0 13px;
+    margin: 23px 0;
+  }
+
+  .donation_card {
+    max-width: 300px;
+  }
+
+  .header3 {
+    font-size: 25px;
+    padding: 0 23px;
+    text-align: center;
+  }
+
+  .credit_card {
+    max-width: 281px;
+    margin: auto;
+  }
+
+  .credit_card h4 {
+    font-size: 15px;
+    line-height: 110%;
+  }
+
+  .donation_card p {
+    margin: 23px 10px;
+    max-width: 280px;
+    text-align: justify;
+  }
+
+  .donation_img  {
+    margin: 19px 20px 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-item {
+    padding: 30px 10px 0 10px;
+  }
+
+  .footer_contacts,
+  .footer_location {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+  .footer_location {
+    align-items: flex-start;
+  }
+
+  .footer_location h3 {
+    margin-bottom: 38px;
+  }
+  
+  .footer-detail.email {
+    padding-left: 19px;
+  }
+
+  .address:first-child {
+    margin-bottom: 40px;
+  }
+
+  a.footer_link {
+    margin-right: 0;
+  }
+
+  .footer-detail a .map{
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  .footer_image {
+    margin: 10px 20px 0;
+  }
+
+  .adress_link {
+    margin-top: 7px;
   }
 }
