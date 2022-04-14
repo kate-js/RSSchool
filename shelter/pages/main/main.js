@@ -37,6 +37,9 @@ function closeMenu(event) {
   if (event.target.classList.contains("nav_link")) {
     nav_burger.classList.remove("open");
     navigation.classList.remove("open");
+    blockLogo.remove();
+    h1.remove();
+    span.remove();
   }
 }
 

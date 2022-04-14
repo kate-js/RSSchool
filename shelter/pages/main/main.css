@@ -194,7 +194,7 @@ html {
 }
 
 .navigation {
-  display: none;
+  display: flex;
 }
 
 .navigation li {
