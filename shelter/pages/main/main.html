@@ -15,21 +15,28 @@
           <h1>Cozy House</h1>
           <span>Shelter for pets in Boston</span>
         </div>
-        <nav>
+        <nav class="nav">
           <ul class="navigation">
-            <li class="underline"><a href="">About the shelter</a></li>
-            <li><a href="../pets/pets.html">Our pets</a></li>
-            <li><a href="#help">Help the shelter</a></li>
-            <li><a href="#contacts">Contacts</a></li>
+            <li class="underline nav_item"><a class="nav_link" href="">About the shelter</a></li>
+            <li class="nav_item"><a  class="nav_link" href="../pets/pets.html">Our pets</a></li>
+            <li class="nav_item"><a  class="nav_link"href="#help">Help the shelter</a></li>
+            <li class="nav_item"><a  class="nav_link"href="#contacts">Contacts</a></li>
           </ul>
         </nav>
+        <div class="nav_burger">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </div>
       </header>
       <div class="main_start _container">
         <div class="main_content">
           <h2 class="main_start_title">Not only people need a house</h2>
           <p class="main_start_content">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. 
             He or she will love you more than anybody else in the world, you will see!</p>
-          <a href="../pets/pets.html"><button class="button">Make a friend</button></a>
+            <div class="button_main">
+              <a href="../pets/pets.html"><button class="button">Make a friend</button></a>
+            </div>
         </div>
         <div class="main_photo">
           <img src="../../assets/images/start-screen-puppy.png" alt="pets_foto">
@@ -58,7 +65,7 @@
               are looking for a house
             </h3>
             <div class="pets_content">
-              <button class="button_slider"></button>
+              <button class="button_slider button_slider1"></button>
               <ul class="pets_cards">
                 <li class="card">
                   <img src="../../assets/images/pets-katrine.png">
@@ -70,7 +77,7 @@
                   <p>Jennifer</p>
                   <button class="button_cards">Learn more</button>
                 </li>
-                <li class="card">
+                <li class="card woody">
                   <img src="../../assets/images/pets-woody.png">
                   <p>Woody</p>
                   <button class="button_cards">Learn more</button>
@@ -126,7 +133,7 @@
 
         <div class="donation">
           <div class="donation_item _container">
-            <div>
+            <div class="donation_img">
               <img src="../../assets/images/donation-dog.png">
             </div>
             <div class="donation_card">
@@ -145,40 +152,47 @@
         </div>
       </main>
       </div>
-      
-      <div class="footer-item">
-        <footer class="footer _container">
-          <a name="contacts"></a>
-          <div class="footer_info contacts">
-            <h3 class="header3">For questions <br> and suggestions</h3>
+    </div>
+    <div class="footer-item">
+      <footer class="footer _container">
+        <!-- <a name="contacts"></a> -->
+          <div class="footer_contacts">
+            <h3 class="header3">For questions and suggestions</h3>
             <div class="footer-detail email">
               <a href="mailto:email@shelter.com" target="_blank"><img src="../../assets/icons/mail.png"></a>
               <a href="mailto:email@shelter.com" target="_blank"><span>email@shelter.com</span></a>
             </div>
-            <div class="footer-detail">
+            <div class="footer-detail email">
               <a href="tel:+136745677554"><img src="../../assets/icons/phone.png"></a>
               <a href="tel:+136745677554"><span>+13 674 567 75 54</span></a>
             </div>
           </div>
-          <div class="footer_info location">
-            <h3 class="header3">We are waiting <br> for your visit</h3>
+          <div class="footer_location">
+            <h3 class="header3">We are waiting for your visit</h3>
             <div class="footer-detail address">
-              <a href="https://goo.gl/maps/T8CfZRXM5zu37a3s8" target="_blank"><img src="../../assets/icons/icon-marker.png"></a>
+              <a href="https://goo.gl/maps/T8CfZRXM5zu37a3s8" target="_blank">
+                <img src="../../assets/icons/icon-marker.png">
+              </a>
               <div>
                 <span>1 Central Street, Boston (entrance from the store)</span>
               </div>
             </div>
-            <div class="footer-detail">
-              <a href="https://goo.gl/maps/T8CfZRXM5zu37a3s8" target="_blank"><img src="../../assets/icons/icon-marker.png"></a>
-              <span>18 South Park, London </span>
+            <div class="footer-detail address">
+              <a href="https://goo.gl/maps/T8CfZRXM5zu37a3s8" target="_blank" class="footer_link">
+                <img src="../../assets/icons/icon-marker.png" class="map">
+              </a>
+              <div class="adress_link">
+                <span>18 South Park, London </span>
+              </div>
             </div>
           </div>
-          <div>
-            <img src="../../assets/images/footer-puppy.png">
-          </div>
-        </footer>
-      </div>
+        
+        <div class="footer_image">
+          <img src="../../assets/images/footer-puppy.png">
+        </div>
+      </footer>
     </div>
+  </div>
   <script src="./main.js"></script>
 </body>
 </html>
