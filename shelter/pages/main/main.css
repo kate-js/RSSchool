@@ -510,7 +510,6 @@ html {
 
 .footer {
   display: flex;  
-  margin-bottom: 60px;
   justify-content: space-between;
 }
 
