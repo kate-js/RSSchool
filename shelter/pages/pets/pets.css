@@ -330,7 +330,6 @@ html {
 
 .footer {
   display: flex;  
-  margin-bottom: 60px;
   justify-content: space-between;
 }
 
@@ -434,7 +433,7 @@ html {
   }
 
   .footer_image {
-    margin-top: 66px;
+    margin-top: 23px;
   }
 }
 
