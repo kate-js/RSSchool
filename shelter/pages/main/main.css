@@ -521,6 +521,7 @@ html {
 .footer_location {
   max-width: 40%;
   margin-top: 16px;
+  margin-left: -20px;
 }
 
 .footer_contacts h3 {
@@ -675,6 +676,7 @@ a.footer_link {
 
   .footer_location {
     max-width: 50%;
+    margin-left: 0;
   }
 
   .footer_image {
