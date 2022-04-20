@@ -351,6 +351,10 @@ html {
   display: flex;
 }
 
+.animation {
+  transition: all 0.5s;
+}
+
 .card {
   display: flex;
   flex-direction: column;
