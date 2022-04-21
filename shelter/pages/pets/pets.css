@@ -71,7 +71,6 @@ html {
 
 .wrapper {
   min-height: 100%;
-  /* overflow: hidden; */
 }
 
 ._container {
@@ -81,6 +80,7 @@ html {
 
 .fixed {
   position: relative;
+  z-index: 1;
 }
 
 .header {
@@ -162,6 +162,14 @@ html {
 .nav_burger .open {
   display: flex;
 
+}
+
+.background {
+  width: 100%;
+  height: 5291px;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(41, 41, 41, 0.6);
 }
 
 .line {
@@ -466,6 +474,7 @@ html {
   .nav.open {
     right: 0;
     transition: 0.5s;
+    height: 5290px;
   }
 
   .navigation {

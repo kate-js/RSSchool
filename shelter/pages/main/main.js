@@ -130,17 +130,6 @@ function petsCard(i) {
 }
 
 let countCard = 3;
-let widthWindow = screen.width;
-
-if (widthWindow >= 1280) {
-  countCard == 3;
-}
-if (widthWindow < 1280 && widthWindow > 768) {
-  countCard == 2;
-}
-if (widthWindow < 320) {
-  countCard == 1;
-}
 
 function createThreeCards() {
   for (let i = 0; i < countCard; i++) {
@@ -196,6 +185,7 @@ const navigation = document.querySelector(".nav");
 const blockLogo = document.createElement("div");
 const h1 = document.createElement("h1");
 const span = document.createElement("span");
+const backgroud = document.querySelector(".back");
 
 function createLogo() {
   blockLogo.classList.add("header_logo");
@@ -214,11 +204,15 @@ function toggleMenu() {
   if (navigation.classList.contains("open")) {
     createLogo();
     console.log("ok");
+    document.body.style.overflow = "hidden";
+    backgroud.classList.add("background");
   } else {
     console.log("no");
     blockLogo.remove();
     h1.remove();
     span.remove();
+    document.body.style.overflow = "scroll";
+    backgroud.classList.remove("background");
   }
 }
 
@@ -233,7 +227,23 @@ function closeMenu(event) {
     blockLogo.remove();
     h1.remove();
     span.remove();
+    document.body.style.overflow = "scroll";
+    backgroud.classList.remove("background");
   }
 }
 
 navLinks.forEach((el) => el.addEventListener("click", closeMenu));
+
+function closeBurger(event) {
+  if (event.target.className === "back background") {
+    nav_burger.classList.remove("open");
+    navigation.classList.remove("open");
+    blockLogo.remove();
+    h1.remove();
+    span.remove();
+    document.body.style.overflow = "scroll";
+    backgroud.classList.remove("background");
+  }
+}
+
+document.addEventListener("click", closeBurger);
