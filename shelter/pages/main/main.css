@@ -331,6 +331,7 @@ html {
 .pets {
   background-color: #F6F6F6;
   padding: 80px 20px 100px 20px;
+  position: relative;
 }
 
 .pets_item {
@@ -585,6 +586,63 @@ html {
 
 a.footer_link {
   margin-right: 0;
+}
+
+.popupLarge {
+  display: flex;
+  max-width: 900px;
+  margin-left: 52px;
+  margin-right: 52px;
+  background-color: white;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+}
+
+.popupInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 50px 20px auto 30px;
+  letter-spacing: 0.06em;
+  color: #000000;
+  text-align: left;
+  font-family: Georgia;
+  font-size: 15px;
+  line-height: 110%;
+}
+
+.popuph3 {
+  font-size: 35px;
+  line-height: 130%;
+  margin-bottom: 10px;
+}
+
+.popuph4 {
+  font-size: 20px;
+  line-height: 115%;
+}
+
+.popupDescription {
+  margin: 40px 0;
+}
+
+.popupMainInfo {
+  color: #F1CDB3;
+}
+
+.popupLi span{
+  color: #000000;
+}
+
+.popupLi span:first-child {
+  font-weight: bold;
+}
+
+.popupImage {
+  display: block;
+  width: 500px;
+  height: 500px;
 }
 
 @media screen and (max-width: 1279px)  {

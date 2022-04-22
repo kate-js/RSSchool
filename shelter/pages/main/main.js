@@ -129,10 +129,8 @@ function petsCard(i) {
   cardItem.append(cardButton);
 }
 
-let countCard = 3;
-
 function createThreeCards() {
-  for (let i = 0; i < countCard; i++) {
+  for (let i = 0; i < 3; i++) {
     petsCard(i);
   }
 }
@@ -146,7 +144,6 @@ function deleteCards() {
     petsCards.innerHTML = "";
   }
 }
-const cards = document.querySelectorAll(".card");
 
 let arrName = [];
 
@@ -158,12 +155,14 @@ function foundName() {
   console.log(arrName);
 }
 
+let cards = document.querySelectorAll(".card");
+
 function createThreeRandomCards() {
   foundName();
   deleteCards();
   let i = 0;
 
-  while (i < countCard) {
+  while (i < 3) {
     let number = Math.floor(Math.random() * 8);
     if (arrName.includes(pets[number].name)) {
       i--;
@@ -174,6 +173,8 @@ function createThreeRandomCards() {
     i++;
   }
   arrName = [];
+  cards = document.querySelectorAll(".card");
+  cards.forEach((el) => el.addEventListener("click", petsPopup));
   console.log(arrName);
 }
 
@@ -247,3 +248,82 @@ function closeBurger(event) {
 }
 
 document.addEventListener("click", closeBurger);
+
+const petsCardConteiner = document.querySelector(".pets");
+
+function petsPopup(event) {
+  let cardtest = event.currentTarget.innerText;
+  let nametest = cardtest.slice(0, -12);
+
+  for (let i = 0; i < pets.length; i++) {
+    const STATS = [
+      {
+        title: "Age: ",
+        value: pets[i].age,
+      },
+      {
+        title: "Inoculations: ",
+        value: pets[i].inoculations,
+      },
+      {
+        title: "Diseases: ",
+        value: pets[i].diseases,
+      },
+      {
+        title: "Parasites: ",
+        value: pets[i].parasites,
+      },
+    ];
+
+    if (nametest == pets[i].name) {
+      const cardPopupLarge = document.createElement("div");
+      cardPopupLarge.classList.add("popupLarge");
+      petsCardConteiner.append(cardPopupLarge);
+
+      const cardImage = document.createElement("img");
+      cardImage.classList.add("popupImage");
+      cardImage.src = pets[i].img;
+      cardPopupLarge.append(cardImage);
+
+      const popupInfo = document.createElement("div");
+      popupInfo.classList.add("popupInfo");
+      cardPopupLarge.append(popupInfo);
+
+      const popupName = document.createElement("h3");
+      popupName.classList.add("popuph3");
+      popupName.innerHTML = pets[i].name;
+      popupInfo.append(popupName);
+
+      const popupBreed = document.createElement("h4");
+      popupBreed.classList.add("popuph4");
+      popupBreed.innerHTML = pets[i].type + " - " + pets[i].breed;
+      popupInfo.append(popupBreed);
+
+      const popupInformation = document.createElement("p");
+      popupInformation.classList.add("popupDescription");
+      popupInformation.innerHTML = pets[i].description;
+      popupInfo.append(popupInformation);
+
+      const popupMainInfo = document.createElement("ul");
+      popupMainInfo.classList.add("popupMainInfo");
+      popupMainInfo.style.listStyle = "inside";
+      popupInfo.append(popupMainInfo);
+
+      for (let k = 0; k < 4; k++) {
+        const popupLi = document.createElement("li");
+        popupLi.classList.add("popupLi");
+        popupMainInfo.append(popupLi);
+        const popupSpan = document.createElement("span");
+        const popupSpan2 = document.createElement("span");
+        popupLi.append(popupSpan);
+        popupLi.append(popupSpan2);
+        popupSpan.innerText = STATS[k].title;
+        popupSpan2.innerHTML = STATS[k].value;
+        popupLi.style.listStyle = "inside";
+      }
+    }
+  }
+  document.body.style.overflow = "hidden";
+}
+
+cards.forEach((el) => el.addEventListener("click", petsPopup));
