@@ -186,7 +186,7 @@ const navigation = document.querySelector(".nav");
 const blockLogo = document.createElement("div");
 const h1 = document.createElement("h1");
 const span = document.createElement("span");
-const backgroud = document.querySelector(".back");
+const background = document.querySelector(".back");
 
 function createLogo() {
   blockLogo.classList.add("header_logo");
@@ -206,14 +206,13 @@ function toggleMenu() {
     createLogo();
     console.log("ok");
     document.body.style.overflow = "hidden";
-    backgroud.classList.add("background");
+    background.classList.add("background");
   } else {
     console.log("no");
+    blockLogo.innerHTML = "";
     blockLogo.remove();
-    h1.remove();
-    span.remove();
     document.body.style.overflow = "scroll";
-    backgroud.classList.remove("background");
+    background.classList.remove("background");
   }
 }
 
@@ -225,11 +224,10 @@ function closeMenu(event) {
   if (event.target.classList.contains("nav_link")) {
     nav_burger.classList.remove("open");
     navigation.classList.remove("open");
+    blockLogo.innerHTML = "";
     blockLogo.remove();
-    h1.remove();
-    span.remove();
     document.body.style.overflow = "scroll";
-    backgroud.classList.remove("background");
+    background.classList.remove("background");
   }
 }
 
@@ -239,17 +237,17 @@ function closeBurger(event) {
   if (event.target.className === "back background") {
     nav_burger.classList.remove("open");
     navigation.classList.remove("open");
+    blockLogo.innerHTML = "";
     blockLogo.remove();
-    h1.remove();
-    span.remove();
     document.body.style.overflow = "scroll";
-    backgroud.classList.remove("background");
+    background.classList.remove("background");
   }
 }
 
-document.addEventListener("click", closeBurger);
+background.addEventListener("click", closeBurger);
 
 const petsCardConteiner = document.querySelector(".pets");
+const cardPopupLarge = document.createElement("div");
 
 function petsPopup(event) {
   let cardtest = event.currentTarget.innerText;
@@ -276,9 +274,12 @@ function petsPopup(event) {
     ];
 
     if (nametest == pets[i].name) {
-      const cardPopupLarge = document.createElement("div");
       cardPopupLarge.classList.add("popupLarge");
       petsCardConteiner.append(cardPopupLarge);
+
+      const buttonClose = document.createElement("botton");
+      buttonClose.classList.add("button_close");
+      cardPopupLarge.append(buttonClose);
 
       const cardImage = document.createElement("img");
       cardImage.classList.add("popupImage");
@@ -324,6 +325,18 @@ function petsPopup(event) {
     }
   }
   document.body.style.overflow = "hidden";
+  background.classList.add("background");
+  const buttonClose1 = document.querySelector(".button_close");
+  buttonClose1.addEventListener("click", closePopup);
 }
 
 cards.forEach((el) => el.addEventListener("click", petsPopup));
+
+function closePopup() {
+  cardPopupLarge.innerHTML = "";
+  cardPopupLarge.remove();
+  background.classList.remove("background");
+  document.body.style.overflow = "scroll";
+}
+
+background.addEventListener("click", closePopup);

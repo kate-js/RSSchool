@@ -70,7 +70,6 @@ body,
 html {
   height: 100%;
   transition: 1s linear; 
-  position: relative;
   z-index: 1;
 }
 
@@ -101,7 +100,7 @@ html {
   cursor: pointer;
   background-color: #f5dcc9;
   text-decoration: underline;
-  transform: scaleY(1.1);
+  transform: scale(1.1);
   border-radius: 100px;
   align-items: center;
   padding: 15px 45px;
@@ -124,6 +123,22 @@ html {
   background-position: center;
 }
 
+.button_close {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  top: -53px;
+  right: -52px;
+  border: 2px solid #F1CDB3;
+  box-sizing: border-box;
+  border-radius: 100px;
+  background: url('../../assets/icons/close.png') no-repeat;
+  background-position: center;
+}
+.button_close:hover {
+  cursor: pointer;
+}
+
 .button_slider:hover {
   cursor: pointer;
   background-color: #f5dcc9;
@@ -137,7 +152,7 @@ html {
 .button_slider2:hover {
   cursor: pointer;
   background-color: #f5dcc9;
-  transform: scaleY(1.2) rotate(180deg);
+  transform: scale(1.1) rotate(180deg);
 }
 
 .button_cards {
@@ -237,6 +252,10 @@ html {
   background-color: rgba(41, 41, 41, 0.6);
 }
 
+.background:hover {
+  cursor: pointer;
+}
+
 .line {
   display: block;
   width: 100%;
@@ -331,7 +350,7 @@ html {
 .pets {
   background-color: #F6F6F6;
   padding: 80px 20px 100px 20px;
-  position: relative;
+  /* position: relative; */
 }
 
 .pets_item {
@@ -590,13 +609,16 @@ a.footer_link {
 
 .popupLarge {
   display: flex;
-  max-width: 900px;
-  margin-left: 52px;
+  position: relative;
+  width: 900px;
+  margin-top: 52px;
   margin-right: 52px;
   background-color: white;
-  position: absolute;
-  top: 20%;
-  left: 15%;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -65%);
+  z-index: 2;
 }
 
 .popupInfo {
@@ -612,7 +634,7 @@ a.footer_link {
   line-height: 110%;
 }
 
-.popuph3 {
+.popupInfo .popuph3 {
   font-size: 35px;
   line-height: 130%;
   margin-bottom: 10px;
@@ -762,6 +784,25 @@ a.footer_link {
   a.footer_link {
     margin-right: 0;
   }
+
+  .popupLarge {
+    width: 630px;
+  }
+
+  .popupImage {
+    width: 350px;
+    height: 350px;
+  }
+
+  .popupInfo {
+    margin: 10px 10px auto 10px;
+  }
+  
+  .popupDescription {
+    margin: 20px 0;
+    font-size: 13px;
+  }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -1024,5 +1065,29 @@ a.footer_link {
 
   .adress_link {
     margin-top: 7px;
+  }
+
+  .popupLarge {
+    width: 240px;
+    margin-right: 30px;
+    padding: 10px;
+  }
+
+  .popupImage {
+    display: none;
+  }
+
+  .popupInfo {
+    margin: 10px 10px auto 10px;
+  }
+  
+  .popupDescription {
+    margin: 22px 0;
+    text-align: justify;
+  }
+
+  .popuph4,
+  .popuph3 {
+    text-align: center;
   }
 }
