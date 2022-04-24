@@ -105,6 +105,127 @@ const pets = [
   },
 ];
 
+const startPage = document.querySelector("#start_page");
+const previousPage = document.querySelector("#previous_page");
+const currentPage = document.querySelector("#current_page");
+const nextPage = document.querySelector("#next_page");
+const lastPage = document.querySelector("#last_page");
+
+const ourPets = [];
+let countCard = 8;
+let page = 1;
+currentPage.innerText = page;
+let array = [];
+let number = 0;
+
+const random = () => {
+  let i = 0;
+  while (i < 8) {
+    number = Math.floor(Math.random() * 8);
+    if (array.includes(pets[number])) {
+      i--;
+    } else {
+      array.push(pets[number]);
+    }
+    i++;
+  }
+  ourPets.push(...array);
+  array = [];
+};
+
+while (ourPets.length < 48) {
+  random();
+}
+
+console.log(ourPets);
+
+const petsCards = document.querySelector(".pets_cards");
+
+let start = 0;
+let end = 8;
+let arrayPain = [];
+
+function paintResult(arr) {
+  console.log(arr);
+  petsCards.innerHTML = " ";
+  for (let k = 0; k < arr.length; k++) {
+    petsCard(k);
+  }
+}
+
+if (document.contains(petsCards)) {
+  arrayPain = ourPets.slice(start, end);
+  paintResult(arrayPain);
+}
+
+function nextPages() {
+  start += 8;
+  end += 8;
+  page += 1;
+  currentPage.innerText = page;
+  console.log(start, end);
+  arrayPain = ourPets.slice(start, end);
+  paintResult(arrayPain);
+}
+
+nextPage.addEventListener("click", nextPages);
+
+function previuosPages() {
+  start -= 8;
+  end -= 8;
+  page -= 1;
+  currentPage.innerText = page;
+  console.log(start, end);
+  arrayPain = ourPets.slice(start, end);
+  paintResult(arrayPain);
+}
+
+previousPage.addEventListener("click", previuosPages);
+
+function lastPages() {
+  start = 40;
+  end = 48;
+  page = 6;
+  currentPage.innerText = page;
+  console.log(start, end);
+  arrayPain = ourPets.slice(start, end);
+  paintResult(arrayPain);
+}
+
+lastPage.addEventListener("click", lastPages);
+
+function startPages() {
+  start = 0;
+  end = 8;
+  page = 1;
+  currentPage.innerText = page;
+  console.log(start, end);
+  arrayPain = ourPets.slice(start, end);
+  paintResult(arrayPain);
+}
+
+startPage.addEventListener("click", startPages);
+
+function petsCard(i) {
+  const cardItem = document.createElement("li");
+  cardItem.classList.add("card");
+  cardItem.classList.add("animation");
+  petsCards.append(cardItem);
+
+  const cardImage = document.createElement("img");
+  cardImage.src = arrayPain[i].img;
+  cardItem.append(cardImage);
+
+  const cardInfo = document.createElement("p");
+  cardInfo.innerHTML = arrayPain[i].name;
+  cardItem.append(cardInfo);
+
+  const cardButton = document.createElement("button");
+  cardButton.classList.add("button_cards");
+  cardButton.innerHTML = "Learn more";
+  cardItem.append(cardButton);
+}
+
 const nav_burger = document.querySelector(".nav_burger");
 const navigation = document.querySelector(".nav");
 const navLinks = document.querySelectorAll(".nav_link");
