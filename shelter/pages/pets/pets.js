@@ -112,15 +112,31 @@ const nextPage = document.querySelector("#next_page");
 const lastPage = document.querySelector("#last_page");
 
 const ourPets = [];
-let countCard = 8;
+let countCard;
+
+function checkWidthWindow() {
+  if (window.innerWidth >= 1280) {
+    countCard = 8;
+  }
+
+  if (window.innerWidth < 1280 && window.innerWidth >= 768) {
+    countCard = 6;
+  }
+
+  if (window.innerWidth < 768) {
+    countCard = 3;
+  }
+}
+
 let page = 1;
 currentPage.innerText = page;
 let array = [];
 let number = 0;
 
 const random = () => {
+  checkWidthWindow();
   let i = 0;
-  while (i < 8) {
+  while (i < countCard) {
     number = Math.floor(Math.random() * 8);
     if (array.includes(pets[number])) {
       i--;
@@ -129,6 +145,7 @@ const random = () => {
     }
     i++;
   }
+  console.log(array);
   ourPets.push(...array);
   array = [];
 };
@@ -137,20 +154,19 @@ while (ourPets.length < 48) {
   random();
 }
 
-console.log(ourPets);
-
 const petsCards = document.querySelector(".pets_cards");
 
 let start = 0;
-let end = 8;
+let end = countCard;
 let arrayPain = [];
+let last = 6;
 
 function paintResult(arr) {
-  console.log(arr);
-  petsCards.innerHTML = " ";
+  petsCards.innerHTML = "";
   for (let k = 0; k < arr.length; k++) {
     petsCard(k);
   }
+  checkPage();
 }
 
 if (document.contains(petsCards)) {
@@ -158,12 +174,43 @@ if (document.contains(petsCards)) {
   paintResult(arrayPain);
 }
 
+function checkPage() {
+  if (page == 1) {
+    startPage.disabled = true;
+    previousPage.disabled = true;
+    lastPage.disabled = false;
+    nextPage.disabled = false;
+  }
+  if (page >= 2 && page <= 5) {
+    startPage.classList.add("active");
+    previousPage.classList.add("active");
+    startPage.disabled = false;
+    previousPage.disabled = false;
+    lastPage.disabled = false;
+    nextPage.disabled = false;
+  }
+
+  if (window.innerWidth < 1280 && window.innerWidth >= 768) {
+    last = 8;
+  }
+
+  if (window.innerWidth < 768) {
+    last = 16;
+  }
+
+  if (page == last) {
+    lastPage.disabled = true;
+    nextPage.disabled = true;
+    startPage.disabled = false;
+    previousPage.disabled = false;
+  }
+}
+
 function nextPages() {
-  start += 8;
-  end += 8;
+  start += countCard;
+  end += countCard;
   page += 1;
   currentPage.innerText = page;
-  console.log(start, end);
   arrayPain = ourPets.slice(start, end);
   paintResult(arrayPain);
 }
@@ -171,11 +218,10 @@ function nextPages() {
 nextPage.addEventListener("click", nextPages);
 
 function previuosPages() {
-  start -= 8;
-  end -= 8;
+  start -= countCard;
+  end -= countCard;
   page -= 1;
   currentPage.innerText = page;
-  console.log(start, end);
   arrayPain = ourPets.slice(start, end);
   paintResult(arrayPain);
 }
@@ -183,11 +229,10 @@ function previuosPages() {
 previousPage.addEventListener("click", previuosPages);
 
 function lastPages() {
-  start = 40;
   end = 48;
-  page = 6;
+  page = last;
+  start = (last - 1) * countCard;
   currentPage.innerText = page;
-  console.log(start, end);
   arrayPain = ourPets.slice(start, end);
   paintResult(arrayPain);
 }
@@ -196,10 +241,9 @@ lastPage.addEventListener("click", lastPages);
 
 function startPages() {
   start = 0;
-  end = 8;
+  end = countCard;
   page = 1;
   currentPage.innerText = page;
-  console.log(start, end);
   arrayPain = ourPets.slice(start, end);
   paintResult(arrayPain);
 }

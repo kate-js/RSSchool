@@ -206,6 +206,11 @@ html {
   letter-spacing: 0.06em;
 }
 
+.button_slider:disabled {
+  border: 2px solid #CDCDCD;
+  color: #CDCDCD;
+}
+
 .active:hover {
   cursor: pointer;
   background-color: #f5dcc9;
@@ -213,11 +218,6 @@ html {
 
 .active {
   border: 2px solid #F1CDB3;
-}
-
-.no_active{
-  border: 2px solid #CDCDCD;
-  color: #CDCDCD;
 }
 
 .active_page {
@@ -292,6 +292,7 @@ html {
   row-gap: 30px;
   column-gap: 10px;
   margin-bottom: 60px;
+  min-height: 930px;
 }
 
 .card {
@@ -477,10 +478,10 @@ html {
     margin-bottom: 27px;
   }
 
-  .card:last-child,
+  /* .card:last-child,
   .card:nth-child(7) {
     display: none;
-  }
+  } */
 
   .footer {
     column-gap: 60px;
@@ -604,7 +605,7 @@ html {
     margin-bottom: 40px;
   }
 
-  .pets_cards li{
+  /* .pets_cards li{
     display: none;
   }
   
@@ -612,7 +613,7 @@ html {
   .pets_cards li:nth-child(2),
   .pets_cards li:nth-child(3){
     display: block;
-  }
+  } */
   
   .button_cards {
     margin: 30px 41px;
