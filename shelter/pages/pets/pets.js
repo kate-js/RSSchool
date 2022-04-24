@@ -110,6 +110,8 @@ const previousPage = document.querySelector("#previous_page");
 const currentPage = document.querySelector("#current_page");
 const nextPage = document.querySelector("#next_page");
 const lastPage = document.querySelector("#last_page");
+let cards;
+console.log(cards);
 
 const ourPets = [];
 let countCard;
@@ -145,7 +147,6 @@ const random = () => {
     }
     i++;
   }
-  console.log(array);
   ourPets.push(...array);
   array = [];
 };
@@ -167,6 +168,9 @@ function paintResult(arr) {
     petsCard(k);
   }
   checkPage();
+  console.log(cards);
+  cards = document.querySelectorAll(".card");
+  cards.forEach((el) => el.addEventListener("click", petsPopup));
 }
 
 if (document.contains(petsCards)) {
@@ -274,7 +278,6 @@ const nav_burger = document.querySelector(".nav_burger");
 const navigation = document.querySelector(".nav");
 const navLinks = document.querySelectorAll(".nav_link");
 const forBack = document.querySelector("#forBack");
-let cards = document.querySelectorAll(".card");
 const background = document.querySelector(".back");
 
 const blockLogo = document.createElement("div");
@@ -298,11 +301,9 @@ function toggleMenu() {
 
   if (navigation.classList.contains("open")) {
     createLogo();
-    console.log("ok");
     document.body.style.overflow = "hidden";
     backgroud.classList.add("background");
   } else {
-    console.log("no");
     blockLogo.innerHTML = "";
     blockLogo.remove();
     document.body.style.overflow = "scroll";
@@ -422,13 +423,17 @@ function petsPopup(event) {
   buttonClose1.addEventListener("click", closePopup);
 }
 
-cards.forEach((el) => el.addEventListener("click", petsPopup));
-
 function closePopup() {
   cardPopupLarge.innerHTML = "";
   cardPopupLarge.remove();
   background.classList.remove("background");
   document.body.style.overflow = "scroll";
+  nav_burger.classList.remove("open");
+  navigation.classList.remove("open");
+  blockLogo.innerHTML = "";
+  blockLogo.remove();
+  document.body.style.overflow = "scroll";
+  backgroud.classList.remove("background");
 }
 
 background.addEventListener("click", closePopup);

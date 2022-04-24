@@ -168,7 +168,7 @@ html {
   width: 100%;
   height: 5291px;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   background-color: rgba(41, 41, 41, 0.6);
 }
 
@@ -204,11 +204,29 @@ html {
   font-size: 20px;
   line-height: 115%;
   letter-spacing: 0.06em;
+  vertical-align: center;
 }
 
 .button_slider:disabled {
   border: 2px solid #CDCDCD;
   color: #CDCDCD;
+}
+
+.button_close {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  top: -53px;
+  right: -52px;
+  border: 2px solid #F1CDB3;
+  box-sizing: border-box;
+  border-radius: 100px;
+  background: url('../../assets/icons/close.png') no-repeat;
+  background-position: center;
+}
+
+.button_close:hover {
+  cursor: pointer;
 }
 
 .active:hover {
@@ -301,6 +319,7 @@ html {
   align-items: center;
   background-color: white;
   width: 270px;
+  animation: show 1s;
 }
 
 
@@ -397,14 +416,13 @@ html {
   display: flex;
   position: relative;
   width: 900px;
-  margin-top: 52px;
-  margin-right: 52px;
   background-color: white;
   position: fixed;
   top:50%;
   left:50%;
-  transform: translate(-50%, -65%);
+  transform: translate(-50%, -50%);
   z-index: 2;
+  animation: show 1s;
 }
 
 .popupInfo {
@@ -438,6 +456,9 @@ html {
 .popupMainInfo {
   color: #F1CDB3;
 }
+.popupLi {
+  margin-bottom: 5px;
+}
 
 .popupLi span{
   color: #000000;
@@ -451,6 +472,10 @@ html {
   display: block;
   width: 500px;
   height: 500px;
+}
+
+@keyframes show {
+  from {opacity: 0;} to {opacity: 1;}
 }
 
 @media screen and (max-width: 1279px) and (min-width:768px) {
@@ -693,6 +718,7 @@ html {
     width: 240px;
     margin-right: 30px;
     padding: 10px;
+    padding-top:0;
   }
 
   .popupImage {
@@ -700,16 +726,23 @@ html {
   }
 
   .popupInfo {
-    margin: 10px 10px auto 10px;
+    margin: 10px 0 auto 0;
   }
   
   .popupDescription {
     margin: 22px 0;
     text-align: justify;
+    font-size: 13px;
+    line-height: 106%;
+
   }
 
   .popuph4,
   .popuph3 {
     text-align: center;
+  }
+
+  .popupLi {
+    margin-bottom: 5px;
   }
 }

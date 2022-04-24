@@ -135,6 +135,7 @@ html {
   background: url('../../assets/icons/close.png') no-repeat;
   background-position: center;
 }
+
 .button_close:hover {
   cursor: pointer;
 }
@@ -350,7 +351,7 @@ html {
 .pets {
   background-color: #F6F6F6;
   padding: 80px 20px 100px 20px;
-  /* position: relative; */
+  min-height: 700px;
 }
 
 .pets_item {
@@ -391,6 +392,7 @@ html {
   align-items: center;
   background-color: white;
   margin: 0 45px;
+  animation: show 1s;
 }
 
 .card:hover {
@@ -619,6 +621,7 @@ a.footer_link {
   left:50%;
   transform: translate(-50%, -65%);
   z-index: 2;
+  animation: show 1s;
 }
 
 .popupInfo {
@@ -665,6 +668,10 @@ a.footer_link {
   display: block;
   width: 500px;
   height: 500px;
+}
+
+@keyframes show {
+  from {opacity: 0;} to {opacity: 1;}
 }
 
 @media screen and (max-width: 1279px)  {
