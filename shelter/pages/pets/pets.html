@@ -9,6 +9,7 @@
 </head>
 <body>
   <div class="wrapper">
+    <div class="back"></div>
     <div class="fixed">
       <div class="header">
         <header class="header_container _container">
@@ -16,12 +17,12 @@
             <a href="../main/main.html"><h1>Cozy House</h1></a>
             <span>Shelter for pets in Boston</span>
           </div>
-          <nav class="nav">
+          <nav class="nav" id="forBack">
             <ul class="navigation">
               <li class="nav_item"><a href="../main/main.html" class="nav_link">About the shelter</a></li>
               <li class="underline nav_item"><a href="#" class="nav_link">Our pets</a></li>
               <li class="nav_item"><a href="../main/main.html#help" class="nav_link">Help the shelter</a></li>
-              <li class="nav_item"><a href="../main/main.html#contacts" class="nav_link">Contacts</a></li>
+              <li class="nav_item"><a href="#contacts" class="nav_link">Contacts</a></li>
             </ul>
           </nav>
           <div class="nav_burger">
@@ -43,53 +44,13 @@
             </h3>
             <div class="pets_content">
               <ul class="pets_cards">
-                <li class="card">
-                  <img src="../../assets/images/pets-katrine.svg">
-                  <p>Katrine</p>
-                  <button class="button_cards">Learn more</button>
-                </li>
-                <li class="card">
-                  <img src="../../assets/images/pets-jennifer.png">
-                  <p>Jennifer</p>
-                  <button class="button_cards">Learn more</button>
-                </li>
-                <li class="card">
-                  <img src="../../assets/images/pets-woody.png">
-                  <p>Woody</p>
-                  <button class="button_cards">Learn more</button>
-                </li>
-                <li class="card">
-                  <img src="../../assets/images/pets-sofia.png">
-                  <p>Sophia</p>
-                  <button class="button_cards">Learn more</button>
-                </li>
-                <li class="card">
-                  <img src="../../assets/images/pets-timmy.png">
-                  <p>Timmy</p>
-                  <button class="button_cards">Learn more</button>
-                </li>
-                <li class="card">
-                  <img src="../../assets/images/pets-charly.png">
-                  <p>Charly</p>
-                  <button class="button_cards">Learn more</button>
-                </li>
-                <li class="card">
-                  <img src="../../assets/images/pets-scarlet.png">
-                  <p>Scarlett</p>
-                  <button class="button_cards">Learn more</button>
-                </li>
-                <li class="card">
-                  <img src="../../assets/images/pets-freadi.png">
-                  <p>Freddie</p>
-                  <button class="button_cards">Learn more</button>
-                </li>
               </ul>
               <div class="main_navigation">
-                <button class="button_slider no_active" disabled><pre><<</pre></button>
-                <button class="button_slider no_active" disabled><pre><</pre></button>
-                <button class="button_slider active_page">1</button>
-                <button class="button_slider active "><pre>></pre></button>
-                <button class="button_slider active "><pre>>></pre></button>
+                <button class="button_slider" id="start_page" disabled><pre><<</pre></button>
+                <button class="button_slider" id="previous_page" disabled><pre><</pre></button>
+                <button class="button_slider active_page" id="current_page"></button>
+                <button class="button_slider active" id="next_page"><pre>></pre></button>
+                <button class="button_slider active" id="last_page"><pre>>></pre></button>
               </div>
             </div>
           </div>
@@ -123,7 +84,8 @@
               <span>18 South Park, London </span>
             </div>
           </div>
-          <div class="footer_image">
+          <div class="footer_image" >
+            <a name="contacts"
             <img src="../../assets/images/footer-puppy.png">
           </div>
       </footer>
