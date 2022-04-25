@@ -487,6 +487,7 @@ html {
 
   .pets {
     padding-bottom: 27px;
+    min-height: 1650px;
   }
 
   .pets_content {
