@@ -69,7 +69,7 @@ h6 {
 body,
 html {
   height: 100%;
-  transition: 1s linear; 
+  transition: 1s linear;
   z-index: 1;
 }
 
@@ -84,7 +84,7 @@ html {
 }
 
 .button {
-  background-color: #F1CDB3;
+  background-color: #f1cdb3;
   border-radius: 100px;
   align-items: center;
   padding: 15px 45px;
@@ -114,10 +114,10 @@ html {
 .button_slider {
   width: 52px;
   height: 52px;
-  border: 2px solid #F1CDB3;
+  border: 2px solid #f1cdb3;
   box-sizing: border-box;
   border-radius: 100px;
-  background-image: url('../../assets/icons/Arrow.png');
+  background-image: url("../../assets/icons/Arrow.png");
   background-repeat: no-repeat;
   background-color: white;
   background-position: center;
@@ -129,15 +129,16 @@ html {
   height: 52px;
   top: -53px;
   right: -52px;
-  border: 2px solid #F1CDB3;
+  border: 2px solid #f1cdb3;
   box-sizing: border-box;
   border-radius: 100px;
-  background: url('../../assets/icons/close.png') no-repeat;
+  background: url("../../assets/icons/close.png") no-repeat;
   background-position: center;
 }
 
 .button_close:hover {
   cursor: pointer;
+  background-color: #f1cdb3;
 }
 
 .button_slider:hover {
@@ -157,7 +158,7 @@ html {
 }
 
 .button_cards {
-  border: 2px solid #F1CDB3;
+  border: 2px solid #f1cdb3;
   box-sizing: border-box;
   border-radius: 100px;
   font-size: 17px;
@@ -177,7 +178,7 @@ html {
 }
 
 .header {
-  background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+  background: radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
   padding-top: 60px;
   position: relative;
 }
@@ -197,7 +198,7 @@ html {
 
 .header_logo h1 {
   font-size: 32px;
-  color: #F1CDB3;
+  color: #f1cdb3;
   margin-bottom: 10px;
   line-height: 35px;
   letter-spacing: 0.06em;
@@ -223,8 +224,8 @@ html {
   line-height: 160%;
 }
 
-.underline{
-  border-bottom: 2px solid #F1CDB3;
+.underline {
+  border-bottom: 2px solid #f1cdb3;
 }
 
 .navigation li:last-child {
@@ -261,7 +262,7 @@ html {
   display: block;
   width: 100%;
   height: 2px;
-  background: #F1CDB3;
+  background: #f1cdb3;
   margin: 4px 0;
   z-index: 2;
   transition: all 0.3s ease-in-out;
@@ -293,7 +294,7 @@ html {
 
 .main_start_title {
   font-size: 44px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 42px;
   padding-right: 150px;
   font-family: Georgia;
@@ -302,7 +303,7 @@ html {
 
 .main_start_content {
   font-size: 15px;
-  color: #CDCDCD;
+  color: #cdcdcd;
   margin-bottom: 42px;
   line-height: 24px;
   font-family: Arial;
@@ -336,20 +337,20 @@ html {
   margin-right: 60px;
   line-height: 130%;
   letter-spacing: 0.06em;
-  font-family: 'Georgia';
+  font-family: "Georgia";
 }
 
 .about_content p {
   margin-top: 24px;
   font-size: 15px;
-  color: #4C4C4C;
+  color: #4c4c4c;
   line-height: 160%;
   font-family: Arial;
   line-height: 160%;
 }
 
 .pets {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   padding: 80px 20px 100px 20px;
   min-height: 700px;
 }
@@ -398,11 +399,11 @@ html {
 .card:hover {
   cursor: pointer;
   background-color: #fefbf9;
-  transform: scale(1,1);
+  transform: scale(1, 1);
 }
 
 .card:hover .button_cards {
-  background-color: #F1CDB3!important;
+  background-color: #f1cdb3 !important;
 }
 
 .card img {
@@ -415,7 +416,7 @@ html {
   font-size: 20px;
   line-height: 23px;
   color: #545454;
-  font-family: 'Georgia';
+  font-family: "Georgia";
 }
 
 .help_item {
@@ -426,7 +427,7 @@ html {
   padding: 80px 0 100px 0;
 }
 
-.help_item h3{
+.help_item h3 {
   width: 310px;
   font-size: 35px;
   line-height: 130%;
@@ -447,7 +448,7 @@ html {
 }
 
 .help_list li p {
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-size: 20px;
   line-height: 115%;
   text-align: center;
@@ -461,13 +462,12 @@ html {
   align-items: center;
 }
 
-
 .help-card img {
   margin-bottom: 27px;
 }
 
 .donation {
-  background: #F6F6F6;
+  background: #f6f6f6;
   padding-top: 80px;
   padding-bottom: 100px;
 }
@@ -508,7 +508,7 @@ html {
 
 .donation_card p {
   font-size: 12px;
-  color: #B2B2B2;
+  color: #b2b2b2;
   line-height: 18px;
   font-style: italic;
   width: 380px;
@@ -516,7 +516,7 @@ html {
 }
 
 .credit_card {
-  background: #F1CDB3;
+  background: #f1cdb3;
   border-radius: 9px;
   align-items: center;
   padding: 10px 15px;
@@ -524,7 +524,7 @@ html {
   width: 349px;
 }
 
-.credit_card h4{
+.credit_card h4 {
   display: inline-block;
   font-size: 20px;
   line-height: 115%;
@@ -540,12 +540,12 @@ html {
 }
 
 .footer-item {
-  background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+  background: radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
   padding: 40px 20px 0 20px;
 }
 
 .footer {
-  display: flex;  
+  display: flex;
   justify-content: space-between;
 }
 
@@ -562,12 +562,12 @@ html {
 
 .footer_contacts h3 {
   margin-bottom: 42px;
-  color:white;
+  color: white;
 }
 
 .footer_location h3 {
   margin-bottom: 32px;
-  color:white;
+  color: white;
 }
 
 .address {
@@ -578,7 +578,7 @@ html {
   width: 41px;
 }
 
-.email{
+.email {
   margin-bottom: 42px;
 }
 
@@ -586,7 +586,7 @@ html {
   font-size: 20px;
   line-height: 115%;
   letter-spacing: 0.06em;
-  color: #F1CDB3;
+  color: #f1cdb3;
   font-family: Georgia;
   display: flex;
   align-items: center;
@@ -597,8 +597,8 @@ html {
   max-width: 100%;
 }
 
-.footer-detail a span{
-  color: #F1CDB3;
+.footer-detail a span {
+  color: #f1cdb3;
 }
 
 .map {
@@ -617,11 +617,12 @@ a.footer_link {
   margin-right: 52px;
   background-color: white;
   position: fixed;
-  top:50%;
-  left:50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -65%);
   z-index: 2;
   animation: show 1s;
+  border-radius: 6px;
 }
 
 .popupInfo {
@@ -653,10 +654,10 @@ a.footer_link {
 }
 
 .popupMainInfo {
-  color: #F1CDB3;
+  color: #f1cdb3;
 }
 
-.popupLi span{
+.popupLi span {
   color: #000000;
 }
 
@@ -671,10 +672,15 @@ a.footer_link {
 }
 
 @keyframes show {
-  from {opacity: 0;} to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-@media screen and (max-width: 1279px)  {
+@media screen and (max-width: 1279px) {
   .header {
     padding: 30px 30px 0 30px;
   }
@@ -719,14 +725,14 @@ a.footer_link {
     column-gap: 40px;
   }
 
-  .card:last-child{
+  .card:last-child {
     display: none;
   }
 
   .help_item {
     max-width: 630px;
   }
-  
+
   .help_list {
     display: grid;
     grid-template-columns: repeat(3, 170px);
@@ -804,12 +810,11 @@ a.footer_link {
   .popupInfo {
     margin: 10px 10px auto 10px;
   }
-  
+
   .popupDescription {
     margin: 20px 0;
     font-size: 13px;
   }
-
 }
 
 @media screen and (max-width: 767px) {
@@ -930,10 +935,10 @@ a.footer_link {
     margin: auto;
   }
 
-  .pets_cards li{
+  .pets_cards li {
     display: none;
   }
-  
+
   .pets_cards li:first-child {
     display: block;
   }
@@ -986,7 +991,6 @@ a.footer_link {
 
   .donation {
     padding: 42px 10px;
-
   }
   .donation span {
     letter-spacing: 0;
@@ -1020,7 +1024,7 @@ a.footer_link {
     text-align: justify;
   }
 
-  .donation_img  {
+  .donation_img {
     margin: 19px 20px 0;
   }
 
@@ -1048,7 +1052,7 @@ a.footer_link {
   .footer_location h3 {
     margin-bottom: 38px;
   }
-  
+
   .footer-detail.email {
     padding-left: 19px;
   }
@@ -1061,7 +1065,7 @@ a.footer_link {
     margin-right: 0;
   }
 
-  .footer-detail a .map{
+  .footer-detail a .map {
     margin-left: 0;
     margin-top: 8px;
   }
@@ -1087,7 +1091,7 @@ a.footer_link {
   .popupInfo {
     margin: 10px 10px auto 10px;
   }
-  
+
   .popupDescription {
     margin: 22px 0;
     text-align: justify;
