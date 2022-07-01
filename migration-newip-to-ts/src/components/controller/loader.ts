@@ -1,11 +1,4 @@
-export interface IOptions {
-    options?: {
-        sources?: string;
-        apiKey?: string;
-        endpoint?: string;
-    };
-    endpoint: 'sources' | 'everything';
-}
+import { IOptions } from '../../types';
 
 class Loader {
     private baseLink: string;

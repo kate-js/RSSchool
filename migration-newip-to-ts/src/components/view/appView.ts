@@ -1,13 +1,7 @@
-import { INews, ISource } from '../../types';
+import { INews } from '../../types';
 import News from './news/news';
 import Sources from './sources/sources';
-
-interface Idata {
-    sources?: ISource[];
-    status: string;
-    totalResults?: number;
-    articles?: INews[];
-}
+import { IGet } from '../controller/controller';
 
 export class AppView {
     news: News;
@@ -18,14 +12,14 @@ export class AppView {
         this.sources = new Sources();
     }
 
-    drawNews(data: Idata) {
+    drawNews(data?: IGet) {
         const values: INews[] = data?.articles ? data?.articles : [];
         console.log(values);
         this.news.draw(values);
         console.log('draw', values);
     }
 
-    drawSources(data: Idata) {
+    drawSources(data?: IGet) {
         const values = data?.sources ? data?.sources : [];
         console.log(values);
         this.sources.draw(values);
