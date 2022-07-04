@@ -1,11 +1,24 @@
 body {
-    color: #fff;
-    background: #17181c;
+    color: #212100;
+    background: #fff;
     font-family: sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-    padding: 10px 30px;
+  padding: 10px 30px;
+  background: antiquewhite;
+  color: black;
+  display: flex;
+  justify-content: center;
 }
 
 header h1 {
@@ -13,23 +26,55 @@ header h1 {
     font-weight: 800;
 }
 
+main {
+  min-height: calc(100vh - 100px);
+  height: 100%;
+}
+
 footer {
-    height: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: antiquewhite;
+  padding: 10px;
+}
+
+.search {
     display: flex;
-    align-items: center;
+    padding: 20px;
     justify-content: center;
 }
+
+input[type="text"] {
+    padding: 10px 15px;
+    width: 50%;
+    min-width: 100px;
+}
+
 footer .copyright {
     font-size: 14px;
     color: #333;
     text-align: center;
+    margin: 0 auto;
 }
 footer .copyright a {
     color: #444;
+    font-weight: 900;
+    text-decoration: none;
 }
 footer .copyright a:hover {
     color: #555;
 }
 footer .copyright:before {
     content: '©';
+}
+
+.footer__logo {
+    display: block;
+    background: url('../assets/rs_school_js.svg') no-repeat;
+    background-size: contain;
+    width: 250px;
+    min-height: 50px;
+    height: 80px;
 }
