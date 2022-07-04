@@ -46,7 +46,7 @@ footer {
     justify-content: center;
 }
 
-input[type="text"] {
+#news-list {
     padding: 10px 15px;
     width: 50%;
     min-width: 100px;
